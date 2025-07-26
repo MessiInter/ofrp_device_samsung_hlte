@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: "zulu"
-          java-version: "8"
+          java-version: "21"
       - name: Syncing OFRP sources
         run: |
           mkdir ~/OFRP
@@ -42,8 +42,8 @@ jobs:
           export ALLOW_MISSING_DEPENDENCIES=true
           export LC_ALL=C
           export TARGET_ARCH=arm
-          export FOX_RECOVERY_INSTALL_PARTITION=/dev/block/platform/msm_sdcc.1/by-name/recovery
-          export FOX_RECOVERY_SYSTEM_PARTITION=/dev/block/platform/msm_sdcc.1/by-name/system
+          export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/msm_sdcc.1/by-name/recovery"
+          export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/platform/msm_sdcc.1/by-name/system"
           export TW_DEFAULT_LANGUAGE="en"
           export OF_VANILLA_BUILD=1
           export OF_SKIP_ORANGEFOX_PROCESS=1
@@ -52,9 +52,9 @@ jobs:
           export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
           export OF_DONT_PATCH_ENCRYPTED_DEVICE=1	
           export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-          export OF_USE_MAGISKBOOT=1
-          export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
-          export OF_USE_TWRP_SAR_DETECT=0
+          export OF_USE_MAGISKBOOT=0
+          export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=0
+          export OF_USE_TWRP_SAR_DETECT=1
           export OF_FLASHLIGHT_ENABLE=0
           export OF_DEVICE_WITHOUT_PERSIST=1
           export OF_DISABLE_EXTRA_ABOUT_PAGE=1
