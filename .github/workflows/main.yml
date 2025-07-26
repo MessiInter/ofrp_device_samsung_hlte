@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: "zulu"
-          java-version: "21"
+          java-version: "8"
       - name: Syncing OFRP sources
         run: |
           mkdir ~/OFRP
