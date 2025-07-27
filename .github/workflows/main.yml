@@ -1,11 +1,11 @@
-name: OrangeFox Recovery
+name: OrangeFox for hlte
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    name: OFRP Build CI
+    name: OrangeFox Build Workflow
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
